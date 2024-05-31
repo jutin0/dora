@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandora</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Pandora</h1>
+    <div id="login-form">
+      <h2>Entrar</h2>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Senha">
+      <button id="login">Entrar</button>
+      <button id="signup">Registrar-se</button>
+    </div>
+    <div id="dashboard" style="display:none;">
+      <h2>Dashboard</h2>
+      <button id="sign-out">Sair</button>
+      <div id="meeting-form">
+        <h3>Agendar uma Reunião</h3>
+        <input type="text" id="meeting-title" placeholder="Título da Reunião">
+        <input type="datetime-local" id="meeting-time">
+        <input type="email" id="meeting-email" placeholder="Email do Participante">
+        <button id="schedule-meeting">Agendar</button>
+      </div>
+      <div id="meetings-list">
+        <h3>Suas Reuniões</h3>
+        <ul id="meetings"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
